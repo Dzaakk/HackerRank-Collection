@@ -54,3 +54,22 @@ for((i=1; i<=99; i++)); do
         echo $i
     fi
 done
+
+# More on condition
+read x
+read y
+read z
+
+if [ $x -eq $y ] && [ $y -eq $z ]; then
+echo "EQUILATERAL"
+elif [ $x -eq $y ] || [ $y -eq $z ] || [ $x -eq $z ]; then
+echo "ISOSCELES"
+else
+echo "SCALENE"
+fi``
+
+# Arithmetics Operations
+read X
+
+result=$(echo "scale = 4;$X" | bc)
+printf "%.3f\n" $result
